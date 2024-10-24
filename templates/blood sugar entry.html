@@ -5,13 +5,28 @@
 </head>
 <body>
 
-<form>
+<form action="/blood_sugar_entry" method="get">
 <label for="sugar-concentration">SUGAR CONCENTRATION</label><br>
 <input type="text" id="sugar-concentration" name="sugar-concentration"><br>
+
 <label for="measured">MEASURED</label><br>
-<input type="text" id="measured" name="measured"><br>
+<select id="measured" name="measured">
+	<option value="Before-breakfast">Before breakfast</option>
+	<option value="After-breakfast" selected>After breakfast</option>
+	<option value="Before-lunch">Before lunch</option>
+	<option value="After-lunch">After lunch</option>
+	<option value="Before-diner">Before diner</option>
+	<option value="After-diner">After diner</option>
+	<option value="Before-sleep">Before sleep</option>
+	<option value="After-sleep">After sleep</option>
+	<option value="Fasting">Fasting</option>
+	<option value="Other">Other</option>
+</select><br>
+
 <label for="notes">NOTES</label><br>
 <input type="text" id="notes" name="notes"><br>
+
+<input type="submit" value="Submit">
 </form>
 
 </body>
